@@ -18,6 +18,7 @@ dataDir <- "data"
 uciHarUrl <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
 uciHarZipfile <- fileJoin(dataDir, "uci_har_dataset.zip")
 
+##Main
 if (!file.exists(uciHarZipfile)) {
   downloadToDataDir(uciHarUrl, uciHarZipfile)
 }
@@ -85,6 +86,5 @@ levels(cast_data_mean$Activity) <- df.activity.label[,2]
 
 #writing the output
 write.table(cast_data_mean, 
-            file = "average_result.csv",
-            sep = ",",
+            file = "average_result.txt",
             row.name = FALSE )

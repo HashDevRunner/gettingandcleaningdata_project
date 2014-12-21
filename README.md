@@ -18,7 +18,7 @@ To run the script, simply run the R script in the R environment:
 Or in cmd line
 	`> Rscript run_analysis.R`
 
-Check for the output in the same directory `average_result.csv`.
+Check for the output in the same directory `average_result.txt`.
 
 ## Notes: 
 - In running the script run_analysis.R, I assumine you installed R properly.
