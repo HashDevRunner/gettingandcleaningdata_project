@@ -83,6 +83,7 @@ cast_data_mean <- dcast( melted_data, Subject + Activity ~ variable,
 cast_data_mean$Activity <- as.factor(cast_data_mean$Activity)
 levels(cast_data_mean$Activity) <- df.activity.label[,2]
 
+#writing the output
 write.table(cast_data_mean, 
             file = "average_result.csv",
             sep = ",",
