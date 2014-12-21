@@ -12,7 +12,6 @@ The dataset includes the following files:
 =========================================
 
 - 'average_result.csv' : Shows the mean of the variables
-- 'stdev_result.csv': Shows the standard deviation of the variables
 
 Notes: 
 ======
