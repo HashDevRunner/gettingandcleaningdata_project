@@ -45,3 +45,21 @@ names(dataset) <- c("Subject","Activity",df.features[,2])
 # Data has complete values
 isComplete <- any(!is.na(dataset))
 
+require(reshape2)
+require(data.table)
+melted_data <- melt(dataset, id.vars = c("Subject","Activity"))
+
+cast_data_dev <- dcast( melted_data, Subject + Activity ~ variable,
+                         sd )
+write.table(cast_data_dev, 
+            file = "stdev_result.csv",
+            sep = ",",
+            row.name = FALSE )
+
+cast_data_mean <- dcast( melted_data, Subject + Activity ~ variable, 
+                         mean )
+
+write.table(cast_data_mean, 
+            file = "average_result.csv",
+            sep = ",",
+            row.name = FALSE )
